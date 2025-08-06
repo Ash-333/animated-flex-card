@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://animated-flex-card.vercel.app/sitemap.xml
