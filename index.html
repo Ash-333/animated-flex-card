@@ -3,11 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animated Flex Card - Beautiful and Interactive Card Designs</title>
-    <meta
-      name="description"
-      content="Explore stunning animated flex card designs with smooth transitions and hover effects. Perfect for creating interactive and engaging web elements."
-    />
+    <title>Animated Flex Card - Interactive Card Designs with Hover Effects</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover beautifully animated flex card designs with hover effects and smooth transitions. Perfect for modern, interactive websites." />
+    <meta name="keywords" content="animated flex card, CSS card animation, flexbox card design, interactive cards, HTML CSS design" />
+    <meta name="author" content="Ashish Kamat" />
+    <link rel="canonical" href="https://animated-flex-card.vercel.app/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Animated Flex Card - Interactive Card Designs" />
+    <meta property="og:description" content="Explore stunning animated flex card designs with hover effects, perfect for engaging modern websites." />
+    <meta property="og:url" content="https://animated-flex-card.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://animated-flex-card.vercel.app/assets/1.jpg" />
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Animated Flex Card - Interactive Card Designs" />
+    <meta name="twitter:description" content="Discover stunning animated flex cards with smooth hover effects." />
+    <meta name="twitter:image" content="https://animated-flex-card.vercel.app/assets/1.jpg" />
 
     <style>
       * {
@@ -16,13 +31,16 @@
         padding: 0;
         font-family: Arial, Helvetica, sans-serif;
       }
+
       body {
         background-color: #eeeeea;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
 
       .wrapper {
-        width: 100%;
-        height: 100vh;
+        flex: 1;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -34,13 +52,13 @@
         flex-wrap: nowrap;
         justify-content: start;
       }
+
       .card {
         width: 80px;
-        border-radius: 0.75rem;
+        border-radius: 2rem;
         background-size: cover;
         cursor: pointer;
         overflow: hidden;
-        border-radius: 2rem;
         margin: 0 10px;
         display: flex;
         align-items: flex-end;
@@ -86,7 +104,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Black with lower opacity */
+        background-color: rgba(0, 0, 0, 0.5);
         z-index: -1;
         border-radius: inherit;
       }
@@ -125,59 +143,93 @@
       .card[for="c4"] {
         background-image: url("./assets/4.jpg");
       }
+
+      header,
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #ccc;
+      }
+
+      footer a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      h1,
+      h2 {
+        color: #333;
+        text-align: center;
+        margin: 20px 0 10px;
+      }
+
+      main {
+        padding: 20px;
+      }
     </style>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="container">
-        <input type="radio" name="slide" id="c1" checked />
-        <label for="c1" class="card">
-          <div class="overlay"></div>
-          <div class="row">
-            <div class="icon">1</div>
-            <div class="description">
-              <h4>Winter</h4>
-              <p>Winter has so much to offer - creative activities</p>
-            </div>
-          </div>
-        </label>
-        <input type="radio" name="slide" id="c2" />
-        <label for="c2" class="card">
-          <div class="overlay"></div>
-          <div class="row">
-            <div class="icon">2</div>
-            <div class="description">
-              <h4>Digital Technology</h4>
-              <p>Gets better every day</p>
-            </div>
-          </div>
-        </label>
-        <input type="radio" name="slide" id="c3" />
-        <label for="c3" class="card">
-          <div class="overlay"></div>
-          <div class="row">
-            <div class="icon">3</div>
-            <div class="description">
-              <h4>New Technology</h4>
-              <p>Space Engineering becomes more and more advanced</p>
-            </div>
-          </div>
-        </label>
-        <input type="radio" name="slide" id="c4" />
-        <label for="c4" class="card">
-          <div class="overlay"></div>
-          <div class="row">
-            <div class="icon">4</div>
-            <div class="description">
-              <h4>Mountain</h4>
-              <p>Space Engineering becomes more and more advanced</p>
-            </div>
-          </div>
-        </label>
-      </div>
-    </div>
+    <header>
+      <h1>Animated Flex Card Designs</h1>
+      <h2>Create Stunning and Interactive Flex Cards</h2>
+    </header>
 
-    <h1 style="color: #eeeeea;">Animated Flex Card Designs</h1>
-    <h2 style="color: #eeeeea">Create Stunning and Interactive Flex Cards</h2>
+    <main>
+      <div class="wrapper">
+        <div class="container">
+          <input type="radio" name="slide" id="c1" checked />
+          <label for="c1" class="card">
+            <div class="overlay"></div>
+            <div class="row">
+              <div class="icon" aria-label="Card 1">1</div>
+              <div class="description">
+                <h4>Winter</h4>
+                <p>Winter has so much to offer - creative activities</p>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="slide" id="c2" />
+          <label for="c2" class="card">
+            <div class="overlay"></div>
+            <div class="row">
+              <div class="icon" aria-label="Card 2">2</div>
+              <div class="description">
+                <h4>Digital Technology</h4>
+                <p>Gets better every day</p>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="slide" id="c3" />
+          <label for="c3" class="card">
+            <div class="overlay"></div>
+            <div class="row">
+              <div class="icon" aria-label="Card 3">3</div>
+              <div class="description">
+                <h4>New Technology</h4>
+                <p>Space Engineering becomes more and more advanced</p>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="slide" id="c4" />
+          <label for="c4" class="card">
+            <div class="overlay"></div>
+            <div class="row">
+              <div class="icon" aria-label="Card 4">4</div>
+              <div class="description">
+                <h4>Mountain</h4>
+                <p>Nature’s beauty in every peak</p>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Code by <a href="https://ashishkamat.com.np/" target="_blank" rel="noopener noreferrer">Ashish Kamat</a></p>
+    </footer>
   </body>
 </html>
